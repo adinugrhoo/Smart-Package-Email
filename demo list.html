@@ -84,122 +84,140 @@
 <body
     style="margin: 0; padding: 0; font-family: Figtree, 'Open Sans', helvetica, 'Roboto', arial; background-color: #f2f2f2; color: #333333; line-height: 1.6; -webkit-font-smoothing: antialiased;">
 
-    <!-- Main Container -->
-    <!-- Updated box-shadow to be much deeper (0.15 opacity and larger blur radius) -->
-    <div class="main-container"
-        style="max-width: 600px; margin: 0 auto; background-color: #ffffff; overflow: hidden; position: relative; box-shadow: 0 12px 40px rgba(0,0,0,0.15);">
+    <!-- Outer Wrapper Table (Background) -->
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#f2f2f2">
+        <tr>
+            <td align="center" style="padding: 0;">
 
-        <!-- Gradient Background -->
-        <!-- FIXED: Wrapped in a zero-height container to prevent spacing issues in email clients like Gmail -->
-        <!-- REPLACED SVG with CSS Gradient for better email support. Note: For 100% reliability, save this gradient as a PNG image and use an <img> tag. -->
-        <div style="height: 0; max-height: 0; overflow: visible; line-height: 0; font-size: 0;">
-            <div
-                style="position: absolute; width: 100%; height: 190px; overflow: hidden; pointer-events: none; top: 0; left: 0; z-index: 0;">
-                <!-- CSS Gradient Fallback: Uses radial-gradient which is supported in Apple Mail, iOS, and most webmail. Outlook PC may show a solid color. -->
-                <div
-                    style="width: 100%; height: 100%; background: radial-gradient(ellipse at 75% 70%, rgba(255, 179, 123, 0.6) 0%, rgba(255, 179, 123, 0) 60%);">
-                </div>
-            </div>
-        </div>
+                <!-- Main Container Table -->
+                <table class="main-container" role="presentation" border="0" cellpadding="0" cellspacing="0"
+                    width="100%"
+                    style="max-width: 600px; margin: 0 auto; background-color: #ffffff; position: relative; box-shadow: 0 12px 40px rgba(0,0,0,0.15);">
 
-        <!-- Header / Logo -->
-        <!-- Added class mobile-side-padding and z-index to ensure it sits on top -->
-        <div class="mobile-side-padding"
-            style="text-align: left; padding: 30px 40px 10px 40px; position: relative; z-index: 1;">
-            <!-- Using the TabSquare logo URL from your source file -->
-            <img src="https://images.dhmedia.io/image/tabsquare/organisation-color-3x.png" alt="TabSquare.Ai Logo"
-                style="height: 24px; border: 0;">
-        </div>
+                    <!-- Gradient Background Row (Visual Layer) -->
+                    <tr>
+                        <td style="padding: 0; font-size: 0; line-height: 0;">
+                            <div style="height: 0; max-height: 0; overflow: visible; line-height: 0; font-size: 0;">
+                                <div
+                                    style="position: absolute; width: 100%; height: 190px; overflow: hidden; pointer-events: none; top: 0; left: 0; z-index: 0;">
+                                    <div
+                                        style="width: 100%; height: 100%; background: radial-gradient(ellipse at 75% 70%, rgba(255, 179, 123, 0.6) 0%, rgba(255, 179, 123, 0) 60%);">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
 
-        <!-- Hero Section -->
-        <!-- Added class mobile-side-padding and z-index to ensure it sits on top -->
-        <div class="mobile-side-padding" style="padding: 20px 40px; position: relative; z-index: 1;">
-            <h1
-                style="font-family: Figtree, sans-serif; font-size: 32px; font-weight: 700; color: #000000; margin: 20px 0 30px 0; line-height: 1.2;">
-                You’re on the <span style="color: #FF6B00;">list!</span>
-            </h1>
+                    <!-- Header / Logo -->
+                    <tr>
+                        <td class="mobile-side-padding"
+                            style="text-align: left; padding: 30px 40px 10px 40px; position: relative; z-index: 1;">
+                            <img src="https://images.dhmedia.io/image/tabsquare/organisation-color-3x.png"
+                                alt="TabSquare.Ai Logo" style="height: 24px; border: 0;">
+                        </td>
+                    </tr>
 
-            <p style="font-size: 16px; color: #444444; margin: 60px 0 20px 0;">
-                Hi {Name},
-            </p>
+                    <!-- Hero Section -->
+                    <tr>
+                        <td class="mobile-side-padding" style="padding: 20px 40px; position: relative; z-index: 1;">
+                            <h1
+                                style="font-family: Figtree, sans-serif; font-size: 32px; font-weight: 700; color: #000000; margin: 20px 0 30px 0; line-height: 1.2;">
+                                You’re on the <span style="color: #FF6B00;">list!</span>
+                            </h1>
 
-            <p style="font-size: 16px; color: #444444; margin: 0 0 20px 0;">
-                Thanks for showing interest in [Package Name] and booking a demo with us!
-            </p>
+                            <p style="font-size: 16px; color: #444444; margin: 60px 0 20px 0;">
+                                Hi {Name},
+                            </p>
 
-            <p style="font-size: 16px; color: #444444; margin: 0 0 0px 0;">
-                We know that seeing is believing, and we're excited to show you exactly how our TabSquare can drive
-                measurable revenue growth for your restaurant.
-            </p>
-        </div>
+                            <p style="font-size: 16px; color: #444444; margin: 0 0 20px 0;">
+                                Thanks for showing interest in [Package Name] and booking a demo with us!
+                            </p>
 
-        <!-- Secondary Content -->
-        <!-- Added class mobile-side-padding -->
-        <div class="mobile-side-padding" style="padding: 0px 40px 40px 40px;">
-            <h3 style="font-size: 16px; font-weight: 700; color: #1A0B00; margin: 0 0 15px 0;">
-                What happens next
-            </h3>
-            <p style="font-size: 15px; color: #444444; margin: 0 0 20px 0;">
-                Our team will reach out shortly to confirm your demo slot and prepare a personalised walkthrough based
-                on your goals.
-            </p>
+                            <p style="font-size: 16px; color: #444444; margin: 0 0 0px 0;">
+                                We know that seeing is believing, and we're excited to show you exactly how our
+                                TabSquare can drive
+                                measurable revenue growth for your restaurant.
+                            </p>
+                        </td>
+                    </tr>
 
-            <!-- Reduced bottom margin from 30px to 15px -->
-            <p style="font-size: 15px; color: #444444; margin: 0 0 15px 0;">
-                Looking forward to meeting you soon!
-            </p>
+                    <!-- Secondary Content -->
+                    <tr>
+                        <td class="mobile-side-padding" style="padding: 0px 40px 40px 40px;">
+                            <h3 style="font-size: 16px; font-weight: 700; color: #1A0B00; margin: 0 0 15px 0;">
+                                What happens next
+                            </h3>
+                            <p style="font-size: 15px; color: #444444; margin: 0 0 20px 0;">
+                                Our team will reach out shortly to confirm your demo slot and prepare a personalised
+                                walkthrough based
+                                on your goals.
+                            </p>
 
-            <p style="font-size: 15px; color: #444444; margin: 0;">
-                Best regards,<br>
-                The TabSquare Team
-            </p>
-        </div>
+                            <p style="font-size: 15px; color: #444444; margin: 0 0 15px 0;">
+                                Looking forward to meeting you soon!
+                            </p>
 
-        <!-- Footer (Dark) -->
-        <!-- Added class mobile-side-padding to parent or adjusted via footer-content class logic -->
-        <div class="footer-content"
-            style="background-color: #120500; padding: 40px; text-align: center; color: #ffffff;">
+                            <p style="font-size: 15px; color: #444444; margin: 0;">
+                                Best regards,<br>
+                                The TabSquare Team
+                            </p>
+                        </td>
+                    </tr>
 
-            <!-- Social Icons -->
-            <div style="margin-bottom: 20px;">
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/company/tabsquare-pte-ltd?utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--mWdHH5e46vuVa7Bg0zB6mPGPPccW3jDBExQRcqn2mhnooesfabhjdJAGRj0XY4VmuMwD9"
-                    class="social-icon" style="text-decoration: none; display: inline-block; margin: 0 10px;">
-                    <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/eacf09d7-2e9e-45ea-9da1-156a55fb0ff6/48x48.png"
-                        alt="LinkedIn" width="20" height="20" style="display: block; border: 0;">
-                </a>
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/TabSquare?utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--mWdHH5e46vuVa7Bg0zB6mPGPPccW3jDBExQRcqn2mhnooesfabhjdJAGRj0XY4VmuMwD9"
-                    class="social-icon" style="text-decoration: none; display: inline-block; margin: 0 10px;">
-                    <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/c1e68fa1-de2b-42cb-9ea2-fb8fa1c3190a/48x48.png"
-                        alt="Facebook" width="20" height="20" style="display: block; border: 0;">
-                </a>
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/tabsquare.ai?utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--mWdHH5e46vuVa7Bg0zB6mPGPPccW3jDBExQRcqn2mhnooesfabhjdJAGRj0XY4VmuMwD9"
-                    class="social-icon" style="text-decoration: none; display: inline-block; margin: 0 10px;">
-                    <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/5070ea4d-60d4-4c33-892d-8f5ec117a9ee/48x48.png"
-                        alt="Instagram" width="20" height="20" style="display: block; border: 0;">
-                </a>
-                <!-- Youtube -->
-                <a href="https://www.youtube.com/channel/UC50fA_ibSHN5etwMzDiOpqg?utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--mWdHH5e46vuVa7Bg0zB6mPGPPccW3jDBExQRcqn2mhnooesfabhjdJAGRj0XY4VmuMwD9"
-                    class="social-icon" style="text-decoration: none; display: inline-block; margin: 0 10px;">
-                    <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/8319413d-4df2-4ff7-88d1-878b2f3f2611/48x48.png"
-                        alt="YouTube" width="20" height="20" style="display: block; border: 0;">
-                </a>
-            </div>
+                    <!-- Footer (Dark) -->
+                    <tr>
+                        <td class="footer-content"
+                            style="background-color: #120500; padding: 40px; text-align: center; color: #ffffff;">
 
-            <!-- Footer Logo -->
-            <div style="margin-bottom: 15px;">
-                <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/917c9bcb-b4a2-41af-bb74-af50fbd2fcc8/514x59.png"
-                    alt="TabSquare.Ai" style="height: 20px;">
-            </div>
+                            <!-- Social Icons -->
+                            <div style="margin-bottom: 20px;">
+                                <!-- LinkedIn -->
+                                <a href="https://www.linkedin.com/company/tabsquare-pte-ltd?utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--mWdHH5e46vuVa7Bg0zB6mPGPPccW3jDBExQRcqn2mhnooesfabhjdJAGRj0XY4VmuMwD9"
+                                    class="social-icon"
+                                    style="text-decoration: none; display: inline-block; margin: 0 10px;">
+                                    <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/eacf09d7-2e9e-45ea-9da1-156a55fb0ff6/48x48.png"
+                                        alt="LinkedIn" width="20" height="20" style="display: block; border: 0;">
+                                </a>
+                                <!-- Facebook -->
+                                <a href="https://www.facebook.com/TabSquare?utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--mWdHH5e46vuVa7Bg0zB6mPGPPccW3jDBExQRcqn2mhnooesfabhjdJAGRj0XY4VmuMwD9"
+                                    class="social-icon"
+                                    style="text-decoration: none; display: inline-block; margin: 0 10px;">
+                                    <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/c1e68fa1-de2b-42cb-9ea2-fb8fa1c3190a/48x48.png"
+                                        alt="Facebook" width="20" height="20" style="display: block; border: 0;">
+                                </a>
+                                <!-- Instagram -->
+                                <a href="https://www.instagram.com/tabsquare.ai?utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--mWdHH5e46vuVa7Bg0zB6mPGPPccW3jDBExQRcqn2mhnooesfabhjdJAGRj0XY4VmuMwD9"
+                                    class="social-icon"
+                                    style="text-decoration: none; display: inline-block; margin: 0 10px;">
+                                    <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/5070ea4d-60d4-4c33-892d-8f5ec117a9ee/48x48.png"
+                                        alt="Instagram" width="20" height="20" style="display: block; border: 0;">
+                                </a>
+                                <!-- Youtube -->
+                                <a href="https://www.youtube.com/channel/UC50fA_ibSHN5etwMzDiOpqg?utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--mWdHH5e46vuVa7Bg0zB6mPGPPccW3jDBExQRcqn2mhnooesfabhjdJAGRj0XY4VmuMwD9"
+                                    class="social-icon"
+                                    style="text-decoration: none; display: inline-block; margin: 0 10px;">
+                                    <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/8319413d-4df2-4ff7-88d1-878b2f3f2611/48x48.png"
+                                        alt="YouTube" width="20" height="20" style="display: block; border: 0;">
+                                </a>
+                            </div>
 
-            <p style="font-size: 12px; color: #888888; margin: 0;">
-                Copyright © 2025. All rights reserved.
-            </p>
-        </div>
+                            <!-- Footer Logo -->
+                            <div style="margin-bottom: 15px;">
+                                <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/917c9bcb-b4a2-41af-bb74-af50fbd2fcc8/514x59.png"
+                                    alt="TabSquare.Ai" style="height: 20px;">
+                            </div>
 
-    </div>
+                            <p style="font-size: 12px; color: #888888; margin: 0;">
+                                Copyright © 2025. All rights reserved.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <!-- End Main Container -->
+
+            </td>
+        </tr>
+    </table>
 </body>
 
 </html>

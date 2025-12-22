@@ -16,8 +16,7 @@
             .main-container {
                 width: 100% !important;
                 max-width: 100% !important;
-                padding: 0 !important;
-                /* Remove container padding, let sections handle it */
+                /* Reset table padding if any, though tables usually handle this differently */
             }
 
             /* Control side padding for content sections specifically */
@@ -84,203 +83,223 @@
 <body
     style="margin: 0; padding: 0; font-family: Figtree, 'Open Sans', helvetica, 'Roboto', arial; background-color: #f2f2f2; color: #333333; line-height: 1.6; -webkit-font-smoothing: antialiased;">
 
-    <!-- Main Container -->
-    <!-- Updated box-shadow to be much deeper (0.15 opacity and larger blur radius) -->
-    <div class="main-container"
-        style="max-width: 600px; margin: 0 auto; background-color: #ffffff; overflow: hidden; position: relative; box-shadow: 0 12px 40px rgba(0,0,0,0.15);">
+    <center>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#f2f2f2">
+            <tr>
+                <td align="center" valign="top">
+                    <!-- Main Container -->
+                    <!-- Updated box-shadow to match original -->
+                    <table class="main-container" width="600" border="0" cellpadding="0" cellspacing="0"
+                        bgcolor="#ffffff"
+                        style="width: 600px; max-width: 600px; margin: 0 auto; background-color: #ffffff; overflow: hidden; position: relative; box-shadow: 0 12px 40px rgba(0,0,0,0.15); border-collapse: collapse;">
 
-        <!-- Gradient Background -->
-        <!-- FIXED: Wrapped in a zero-height container to prevent spacing issues in email clients like Gmail -->
-        <!-- REPLACED SVG with CSS Gradient for better email support. Note: For 100% reliability, save this gradient as a PNG image and use an <img> tag. -->
-        <div style="height: 0; max-height: 0; overflow: visible; line-height: 0; font-size: 0;">
-            <div
-                style="position: absolute; width: 100%; height: 190px; overflow: hidden; pointer-events: none; top: 0; left: 0; z-index: 0;">
-                <!-- CSS Gradient Fallback: Uses radial-gradient which is supported in Apple Mail, iOS, and most webmail. Outlook PC may show a solid color. -->
-                <div
-                    style="width: 100%; height: 100%; background: radial-gradient(ellipse at 75% 70%, rgba(255, 179, 123, 0.6) 0%, rgba(255, 179, 123, 0) 60%);">
-                </div>
-            </div>
-        </div>
+                        <!-- Gradient Background -->
+                        <!-- Kept inside a zero-height row to preserve absolute positioning logic -->
+                        <tr style="height: 0; line-height: 0;">
+                            <td height="0" style="padding: 0; height: 0; line-height: 0; font-size: 0;">
+                                <div style="height: 0; max-height: 0; overflow: visible; line-height: 0; font-size: 0;">
+                                    <div
+                                        style="position: absolute; width: 100%; height: 190px; overflow: hidden; pointer-events: none; top: 0; left: 0; z-index: 0;">
+                                        <!-- CSS Gradient Fallback -->
+                                        <div
+                                            style="width: 100%; height: 100%; background: radial-gradient(ellipse at 75% 70%, rgba(255, 179, 123, 0.6) 0%, rgba(255, 179, 123, 0) 60%);">
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
 
-        <!-- Header / Logo -->
-        <!-- Added class mobile-side-padding and z-index to ensure it sits on top -->
-        <div class="mobile-side-padding"
-            style="text-align: left; padding: 30px 40px 10px 40px; position: relative; z-index: 1;">
-            <!-- Using the TabSquare logo URL from your source file -->
-            <img src="https://images.dhmedia.io/image/tabsquare/organisation-color-3x.png" alt="TabSquare.Ai Logo"
-                style="height: 24px; border: 0;">
-        </div>
+                        <!-- Header / Logo -->
+                        <tr>
+                            <td class="mobile-side-padding" align="left"
+                                style="padding: 30px 40px 10px 40px; position: relative; z-index: 1;">
+                                <img src="https://images.dhmedia.io/image/tabsquare/organisation-color-3x.png"
+                                    alt="TabSquare.Ai Logo" style="height: 24px; border: 0;">
+                            </td>
+                        </tr>
 
-        <!-- Hero Section -->
-        <!-- Added class mobile-side-padding and z-index to ensure it sits on top -->
-        <div class="mobile-side-padding" style="padding: 20px 40px; position: relative; z-index: 1;">
-            <h1
-                style="font-family: Figtree, sans-serif; font-size: 32px; font-weight: 700; color: #000000; margin: 20px 0 30px 0; line-height: 1.2;">
-                Start your journey with <span style="color: #FF6B00;">us!</span>
-            </h1>
+                        <!-- Hero Section -->
+                        <tr>
+                            <td class="mobile-side-padding" align="left"
+                                style="padding: 20px 40px; position: relative; z-index: 1; font-family: Figtree, 'Open Sans', helvetica, 'Roboto', arial;">
+                                <h1
+                                    style="font-family: Figtree, sans-serif; font-size: 32px; font-weight: 700; color: #000000; margin: 20px 0 30px 0; line-height: 1.2;">
+                                    Start your journey with <span style="color: #FF6B00;">us!</span>
+                                </h1>
 
-            <p style="font-size: 16px; color: #444444; margin: 60px 0 20px 0;">
-                Hi {Name},
-            </p>
+                                <p style="font-size: 16px; color: #444444; margin: 60px 0 20px 0;">
+                                    Hi {Name},
+                                </p>
 
-            <p style="font-size: 16px; color: #444444; margin: 0 0 20px 0;">
-                Did you know that your restaurant could be earning more without adding extra staff or changing
-                operations?
-            </p>
+                                <p style="font-size: 16px; color: #444444; margin: 0 0 20px 0;">
+                                    Did you know that your restaurant could be earning more without adding extra staff
+                                    or
+                                    changing operations?
+                                </p>
 
-            <p style="font-size: 16px; color: #444444; margin: 0 0 20px 0;">
-                With TabSquare's AI-powered solutions, F&B businesses like yours are turning every order into an
-                opportunity to increase spend, grow loyalty, and reduce operational strain.<br>
-                And now, you can choose a pricing package that fits your goals and growth stage.
-            </p>
-        </div>
+                                <p style="font-size: 16px; color: #444444; margin: 0 0 20px 0;">
+                                    With TabSquare's AI-powered solutions, F&B businesses like yours are turning every
+                                    order into an opportunity to increase spend, grow loyalty, and reduce operational
+                                    strain.<br>
+                                    And now, you can choose a pricing package that fits your goals and growth stage.
+                                </p>
+                            </td>
+                        </tr>
 
-        <!-- Feature Box (Dark Section) -->
-        <!-- Added class mobile-side-padding -->
-        <div class="mobile-side-padding" style="padding: 0 40px 30px 40px;">
-            <table class="feature-box" cellpadding="0" cellspacing="0" border="0" width="100%"
-                style="background-color: #1A0B00; border-radius: 16px; padding: 30px; color: #ffffff;">
-                <tr>
-                    <!-- Tightened padding-bottom from 20px to 15px -->
-                    <td colspan="2" style="padding-bottom: 15px;">
-                        <span style="font-size: 16px; font-weight: 700; color: #ffffff;">What Our Solutions Can Do for
-                            You</span>
-                    </td>
-                </tr>
+                        <!-- Feature Box (Dark Section) -->
+                        <tr>
+                            <td class="mobile-side-padding" style="padding: 0 40px 30px 40px;">
+                                <table class="feature-box" cellpadding="0" cellspacing="0" border="0" width="100%"
+                                    style="background-color: #1A0B00; border-radius: 16px; padding: 30px; color: #ffffff;">
+                                    <tr>
+                                        <td colspan="2" style="padding-bottom: 15px;">
+                                            <span style="font-size: 16px; font-weight: 700; color: #ffffff;">What Our
+                                                Solutions Can Do for You</span>
+                                        </td>
+                                    </tr>
 
-                <!-- Feature 1 -->
-                <tr>
-                    <!-- Tightened padding-bottom from 15px to 10px -->
-                    <td valign="top" style="width: 30px; padding-bottom: 10px;">
-                        <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/e96b2eb9-2e35-4fe2-91fd-b22656b23379/72x72.png"
-                            alt="Check" width="20" height="20" style="display: block; border: 0;">
-                    </td>
-                    <!-- Tightened padding-bottom from 15px to 10px -->
-                    <td class="feature-item-td feature-text" valign="top"
-                        style="font-size: 15px; color: #dddddd; padding-bottom: 10px; line-height: 1.4;">
-                        Drive Repeat Customers with smart reorder prompts.
-                    </td>
-                </tr>
+                                    <!-- Feature 1 -->
+                                    <tr>
+                                        <td valign="top" style="width: 30px; padding-bottom: 10px;">
+                                            <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/e96b2eb9-2e35-4fe2-91fd-b22656b23379/72x72.png"
+                                                alt="Check" width="20" height="20" style="display: block; border: 0;">
+                                        </td>
+                                        <td class="feature-item-td feature-text" valign="top"
+                                            style="font-size: 15px; color: #dddddd; padding-bottom: 10px; line-height: 1.4;">
+                                            Drive Repeat Customers with smart reorder prompts.
+                                        </td>
+                                    </tr>
 
-                <!-- Feature 2 -->
-                <tr>
-                    <td valign="top" style="width: 30px; padding-bottom: 10px;">
-                        <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/e96b2eb9-2e35-4fe2-91fd-b22656b23379/72x72.png"
-                            alt="Check" width="20" height="20" style="display: block; border: 0;">
-                    </td>
-                    <td class="feature-item-td feature-text" valign="top"
-                        style="font-size: 15px; color: #dddddd; padding-bottom: 10px; line-height: 1.4;">
-                        Increase Average Bill Value through AI upsells.
-                    </td>
-                </tr>
+                                    <!-- Feature 2 -->
+                                    <tr>
+                                        <td valign="top" style="width: 30px; padding-bottom: 10px;">
+                                            <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/e96b2eb9-2e35-4fe2-91fd-b22656b23379/72x72.png"
+                                                alt="Check" width="20" height="20" style="display: block; border: 0;">
+                                        </td>
+                                        <td class="feature-item-td feature-text" valign="top"
+                                            style="font-size: 15px; color: #dddddd; padding-bottom: 10px; line-height: 1.4;">
+                                            Increase Average Bill Value through AI upsells.
+                                        </td>
+                                    </tr>
 
-                <!-- Feature 3 -->
-                <tr>
-                    <td valign="top" style="width: 30px; padding-bottom: 10px;">
-                        <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/e96b2eb9-2e35-4fe2-91fd-b22656b23379/72x72.png"
-                            alt="Check" width="20" height="20" style="display: block; border: 0;">
-                    </td>
-                    <td class="feature-item-td feature-text" valign="top"
-                        style="font-size: 15px; color: #dddddd; padding-bottom: 10px; line-height: 1.4;">
-                        Speed Up Ordering & Reduce Errors across dine-in & takeaway.
-                    </td>
-                </tr>
+                                    <!-- Feature 3 -->
+                                    <tr>
+                                        <td valign="top" style="width: 30px; padding-bottom: 10px;">
+                                            <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/e96b2eb9-2e35-4fe2-91fd-b22656b23379/72x72.png"
+                                                alt="Check" width="20" height="20" style="display: block; border: 0;">
+                                        </td>
+                                        <td class="feature-item-td feature-text" valign="top"
+                                            style="font-size: 15px; color: #dddddd; padding-bottom: 10px; line-height: 1.4;">
+                                            Speed Up Ordering & Reduce Errors across dine-in & takeaway.
+                                        </td>
+                                    </tr>
 
-                <!-- Feature 4 -->
-                <tr>
-                    <td valign="top" style="width: 30px; padding-bottom: 0;">
-                        <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/e96b2eb9-2e35-4fe2-91fd-b22656b23379/72x72.png"
-                            alt="Check" width="20" height="20" style="display: block; border: 0;">
-                    </td>
-                    <td class="feature-item-td feature-text" valign="top"
-                        style="font-size: 15px; color: #dddddd; padding-bottom: 0; line-height: 1.4;">
-                        Understand What Works with real-time menu insights
-                    </td>
-                </tr>
-            </table>
-        </div>
+                                    <!-- Feature 4 -->
+                                    <tr>
+                                        <td valign="top" style="width: 30px; padding-bottom: 0;">
+                                            <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/e96b2eb9-2e35-4fe2-91fd-b22656b23379/72x72.png"
+                                                alt="Check" width="20" height="20" style="display: block; border: 0;">
+                                        </td>
+                                        <td class="feature-item-td feature-text" valign="top"
+                                            style="font-size: 15px; color: #dddddd; padding-bottom: 0; line-height: 1.4;">
+                                            Understand What Works with real-time menu insights
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
 
-        <!-- Secondary Content -->
-        <!-- Added class mobile-side-padding -->
-        <div class="mobile-side-padding" style="padding: 10px 40px 40px 40px;">
-            <h3 style="font-size: 16px; font-weight: 700; color: #1A0B00; margin: 0 0 15px 0;">
-                Designed for All Types of F&B Businesses
-            </h3>
-            <p style="font-size: 15px; color: #444444; margin: 0 0 20px 0;">
-                Whether you're just starting with digital ordering or ready to scale, our plans are built to match your
-                pace and grow with you.
-            </p>
+                        <!-- Secondary Content -->
+                        <tr>
+                            <td class="mobile-side-padding" align="left"
+                                style="padding: 10px 40px 40px 40px; font-family: Figtree, 'Open Sans', helvetica, 'Roboto', arial;">
+                                <h3 style="font-size: 16px; font-weight: 700; color: #1A0B00; margin: 0 0 15px 0;">
+                                    Designed for All Types of F&B Businesses
+                                </h3>
+                                <p style="font-size: 15px; color: #444444; margin: 0 0 20px 0;">
+                                    Whether you're just starting with digital ordering or ready to scale, our plans are
+                                    built to match your pace and grow with you.
+                                </p>
 
-            <!-- Reduced bottom margin from 30px to 15px -->
-            <p style="font-size: 15px; color: #444444; margin: 0 0 15px 0;">
-                👉 See all pricing packages & find the best fit for your business
-            </p>
+                                <p style="font-size: 15px; color: #444444; margin: 0 0 15px 0;">
+                                    👉 See all pricing packages & find the best fit for your business
+                                </p>
 
-            <!-- CTA Button -->
-            <!-- Reduced padding from 20px to 10px -->
-            <div class="cta-container" style="text-align: center; padding: 10px 0;">
-                <!-- Updated box-shadow AND added border-bottom fallback for Gmail -->
-                <a href="#" class="cta-button"
-                    style="background-color: #FF6B00; color: #ffffff; text-decoration: none; padding: 15px 30px; border-radius: 50px; font-weight: 700; font-size: 16px; display: inline-block; border-bottom: 4px solid #C45200; box-shadow: 0 8px 20px rgba(0,0,0,0.25);">
-                    Explore Plans & Solutions
-                </a>
-            </div>
+                                <!-- CTA Button -->
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td class="cta-container" align="center" style="padding: 10px 0;">
+                                            <a href="#" class="cta-button"
+                                                style="background-color: #FF6B00; color: #ffffff; text-decoration: none; padding: 15px 30px; border-radius: 50px; font-weight: 700; font-size: 16px; display: inline-block; border-bottom: 4px solid #C45200; box-shadow: 0 8px 20px rgba(0,0,0,0.25);">
+                                                Explore Plans & Solutions
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
 
-            <!-- Reduced top margin from 30px to 15px -->
-            <p style="font-size: 15px; color: #444444; margin: 15px 0 10px 0;">
-                Let's help you turn diners into loyal customers.
-            </p>
-            <p style="font-size: 15px; color: #444444; margin: 0;">
-                Best regards,<br>
-                The TabSquare Team
-            </p>
-        </div>
+                                <p style="font-size: 15px; color: #444444; margin: 15px 0 10px 0;">
+                                    Let's help you turn diners into loyal customers.
+                                </p>
+                                <p style="font-size: 15px; color: #444444; margin: 0;">
+                                    Best regards,<br>
+                                    The TabSquare Team
+                                </p>
+                            </td>
+                        </tr>
 
-        <!-- Footer (Dark) -->
-        <!-- Added class mobile-side-padding to parent or adjusted via footer-content class logic -->
-        <div class="footer-content"
-            style="background-color: #120500; padding: 40px; text-align: center; color: #ffffff;">
+                        <!-- Footer (Dark) -->
+                        <tr>
+                            <td class="footer-content" align="center" bgcolor="#120500"
+                                style="background-color: #120500; padding: 40px; text-align: center; color: #ffffff; font-family: Figtree, 'Open Sans', helvetica, 'Roboto', arial;">
 
-            <!-- Social Icons -->
-            <div style="margin-bottom: 20px;">
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/company/tabsquare-pte-ltd?utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--mWdHH5e46vuVa7Bg0zB6mPGPPccW3jDBExQRcqn2mhnooesfabhjdJAGRj0XY4VmuMwD9"
-                    class="social-icon" style="text-decoration: none; display: inline-block; margin: 0 10px;">
-                    <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/eacf09d7-2e9e-45ea-9da1-156a55fb0ff6/48x48.png"
-                        alt="LinkedIn" width="20" height="20" style="display: block; border: 0;">
-                </a>
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/TabSquare?utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--mWdHH5e46vuVa7Bg0zB6mPGPPccW3jDBExQRcqn2mhnooesfabhjdJAGRj0XY4VmuMwD9"
-                    class="social-icon" style="text-decoration: none; display: inline-block; margin: 0 10px;">
-                    <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/c1e68fa1-de2b-42cb-9ea2-fb8fa1c3190a/48x48.png"
-                        alt="Facebook" width="20" height="20" style="display: block; border: 0;">
-                </a>
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/tabsquare.ai?utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--mWdHH5e46vuVa7Bg0zB6mPGPPccW3jDBExQRcqn2mhnooesfabhjdJAGRj0XY4VmuMwD9"
-                    class="social-icon" style="text-decoration: none; display: inline-block; margin: 0 10px;">
-                    <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/5070ea4d-60d4-4c33-892d-8f5ec117a9ee/48x48.png"
-                        alt="Instagram" width="20" height="20" style="display: block; border: 0;">
-                </a>
-                <!-- Youtube -->
-                <a href="https://www.youtube.com/channel/UC50fA_ibSHN5etwMzDiOpqg?utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--mWdHH5e46vuVa7Bg0zB6mPGPPccW3jDBExQRcqn2mhnooesfabhjdJAGRj0XY4VmuMwD9"
-                    class="social-icon" style="text-decoration: none; display: inline-block; margin: 0 10px;">
-                    <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/8319413d-4df2-4ff7-88d1-878b2f3f2611/48x48.png"
-                        alt="YouTube" width="20" height="20" style="display: block; border: 0;">
-                </a>
-            </div>
+                                <!-- Social Icons -->
+                                <div style="margin-bottom: 20px;">
+                                    <!-- LinkedIn -->
+                                    <a href="https://www.linkedin.com/company/tabsquare-pte-ltd?utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--mWdHH5e46vuVa7Bg0zB6mPGPPccW3jDBExQRcqn2mhnooesfabhjdJAGRj0XY4VmuMwD9"
+                                        class="social-icon"
+                                        style="text-decoration: none; display: inline-block; margin: 0 10px;">
+                                        <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/eacf09d7-2e9e-45ea-9da1-156a55fb0ff6/48x48.png"
+                                            alt="LinkedIn" width="20" height="20" style="display: block; border: 0;">
+                                    </a>
+                                    <!-- Facebook -->
+                                    <a href="https://www.facebook.com/TabSquare?utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--mWdHH5e46vuVa7Bg0zB6mPGPPccW3jDBExQRcqn2mhnooesfabhjdJAGRj0XY4VmuMwD9"
+                                        class="social-icon"
+                                        style="text-decoration: none; display: inline-block; margin: 0 10px;">
+                                        <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/c1e68fa1-de2b-42cb-9ea2-fb8fa1c3190a/48x48.png"
+                                            alt="Facebook" width="20" height="20" style="display: block; border: 0;">
+                                    </a>
+                                    <!-- Instagram -->
+                                    <a href="https://www.instagram.com/tabsquare.ai?utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--mWdHH5e46vuVa7Bg0zB6mPGPPccW3jDBExQRcqn2mhnooesfabhjdJAGRj0XY4VmuMwD9"
+                                        class="social-icon"
+                                        style="text-decoration: none; display: inline-block; margin: 0 10px;">
+                                        <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/5070ea4d-60d4-4c33-892d-8f5ec117a9ee/48x48.png"
+                                            alt="Instagram" width="20" height="20" style="display: block; border: 0;">
+                                    </a>
+                                    <!-- Youtube -->
+                                    <a href="https://www.youtube.com/channel/UC50fA_ibSHN5etwMzDiOpqg?utm_source=hs_email&amp;utm_medium=email&amp;_hsenc=p2ANqtz--mWdHH5e46vuVa7Bg0zB6mPGPPccW3jDBExQRcqn2mhnooesfabhjdJAGRj0XY4VmuMwD9"
+                                        class="social-icon"
+                                        style="text-decoration: none; display: inline-block; margin: 0 10px;">
+                                        <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/8319413d-4df2-4ff7-88d1-878b2f3f2611/48x48.png"
+                                            alt="YouTube" width="20" height="20" style="display: block; border: 0;">
+                                    </a>
+                                </div>
 
-            <!-- Footer Logo -->
-            <div style="margin-bottom: 15px;">
-                <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/917c9bcb-b4a2-41af-bb74-af50fbd2fcc8/514x59.png"
-                    alt="TabSquare.Ai" style="height: 20px;">
-            </div>
+                                <!-- Footer Logo -->
+                                <div style="margin-bottom: 15px;">
+                                    <img src="http://cdn.mcauto-images-production.sendgrid.net/43ae1a6283d2350b/917c9bcb-b4a2-41af-bb74-af50fbd2fcc8/514x59.png"
+                                        alt="TabSquare.Ai" style="height: 20px;">
+                                </div>
 
-            <p style="font-size: 12px; color: #888888; margin: 0;">
-                Copyright © 2026. All rights reserved.
-            </p>
-        </div>
-
-    </div>
+                                <p style="font-size: 12px; color: #888888; margin: 0;">
+                                    Copyright © 2026. All rights reserved.
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </center>
 </body>
 
 </html>
